@@ -38,6 +38,7 @@
 
   <p align="center">
     A library to support object-oriented JavaScripting for Microsoft Dynamics 365 (D365)<br/>
+  </p>
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
