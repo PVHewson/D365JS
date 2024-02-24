@@ -229,7 +229,7 @@ D365JS.AccountForm.OnLoad()
   </p>
 </div>
 
-<!-- ROADMAP -->
+<!-- ROADMAP 
 ## Roadmap
 
 - [ ] Feature 1
@@ -241,7 +241,7 @@ See the [open issues](https://github.com/PVHewson/D365JS/issues) for a full list
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+-->
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -273,7 +273,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Paul Hewson - pvhewson@gmail.com
 
 Project Link: [https://github.com/PVHewson/D365JS](https://github.com/PVHewson/D365JS)
 
@@ -281,7 +281,7 @@ Project Link: [https://github.com/PVHewson/D365JS](https://github.com/PVHewson/D
 
 
 
-<!-- ACKNOWLEDGMENTS -->
+<!-- ACKNOWLEDGMENTS
 ## Acknowledgments
 
 * []()
@@ -290,7 +290,7 @@ Project Link: [https://github.com/PVHewson/D365JS](https://github.com/PVHewson/D
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+ -->
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
