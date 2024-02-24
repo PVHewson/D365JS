@@ -1,0 +1,22 @@
+{
+  "name": "d365js",
+  "version": "1.0.1",
+  "description": "Support for developing object-oriented D365 JavaScript",
+  "main": "index.js",
+  "bin": {
+    "d365js": "./cli.js"
+  },
+  "dependencies": {
+    "commander": "^8.2.0"
+  },  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node install.js"
+  },
+  "author": "Paul Hewson",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  }
+}
