@@ -2,8 +2,8 @@ const path = require('path');
 module.exports = {
   mode: "development",
   entry: {
-    "AccountForm" : path.resolve(__dirname, 'source/js/Account.Form.js'),
-    "AccountQuickForm" : path.resolve(__dirname, 'source/js/Account.QuickForm.js')
+    "AccountForm" : path.resolve(__dirname, 'source/Account.Form.js'),
+    "AccountQuickForm" : path.resolve(__dirname, 'source/Account.QuickForm.js')
   },
   output: {
     library: ['D365JS','[name]'],
