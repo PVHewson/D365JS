@@ -16,6 +16,8 @@ jobs:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
-      - run: npm publish --access public
+      - name: Publish to GitHub Packages
+        run: npm publish  --access public --registry=https://npm.pkg.github.com
         env:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}      
+            - run: npm publish --access public
