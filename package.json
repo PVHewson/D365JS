@@ -1,6 +1,6 @@
 {
   "name": "d365js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Support for developing object-oriented D365 JavaScript",
   "homepage": "https://github.com/PVHewson/D365JS#readme",
   "repository": {
