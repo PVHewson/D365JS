@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "description": "Support for developing object-oriented D365 JavaScript",
   "homepage": "https://github.com/PVHewson/D365JS#readme",
-  "repository": "github:PVHewson/D365JS.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PVHewson/D365JS.git"
+  },
   "main": "index.js",
   "bin": {
-    "d365js": "./cli.js"
+    "d365js": "cli.js"
   },
   "dependencies": {
     "commander": "^8.2.0"
-  },  
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "node install.js"
