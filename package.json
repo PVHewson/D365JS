@@ -2,9 +2,8 @@
   "name": "d365js",
   "version": "1.0.0",
   "description": "Support for developing object-oriented D365 JavaScript",
-  "repository": {
-    "url": "https://github.com/PVHewson/D365JS.git"
-  },
+  "homepage": "https://github.com/PVHewson/D365JS#readme",
+  "repository": "github:PVHewson/D365JS.git",
   "main": "index.js",
   "bin": {
     "d365js": "./cli.js"

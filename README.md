@@ -30,12 +30,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/PVHewson/D365JS">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-<h3 align="center">D365JS</h3>
-
+  <h3 align="center">D365JS</h3>
   <p align="center">
     A library to support object-oriented JavaScripting for Microsoft Dynamics 365 (D365)<br/>
   </p>
