@@ -111,15 +111,15 @@ Note: Using modules in D365 requires the use of webpack to bundle the required f
 Go to the 'sample' folder to see an example of how D365JS can be used. The sample\source\js folder contains custom code for two forms related to the OOTB D365 Account table.
 The sample code shows a structure suitable to applying object-orient design principles, and the D365JS FormClass to your own model-driven applications:
 
-Account.js
+###Account.js
 Exports an Account class, extending the FormClass, containing methods and properties related to the Account table, but not specific to any particular form.
 
-Account.Form.js
+###Account.Form.js
 Contains an AccountForm class, extending the Account class, containing methods and properties specific to the default form of the Account table. 
 It exports an OnLoad function that instantiates a new AccountForm object, and an OnSave function that calls the OnSave method of the AccountForm class.
 OnLoad ofan Account form, this seta default 'name', and sets an onChange event for the 'websiteurl' field that sets the 'tickersymbol' filed to "D365JS".
 
-Account.QuickForm.js
+###Account.QuickForm.js
 Contains a AccountQuickForm class, extending the Account class, containing methods and properties specific to the QuickCreate form of the Account table. 
 It exports an OnLoad function that instantiates a new AccountQuickForm object.
 
@@ -133,7 +133,7 @@ D365JS.AccountForm.OnSave
 D365JS.AccountQuickForm.OnLoad
 D365JS.AccountQuickForm.OnSave
 
-Install and configure WebPack
+###Install and configure WebPack
 In the VS Terminal initialise a project for your solution, and add a dev-dependency for WebPack and the WebPack CLI:
 npm init -y
 npm i -D webpack webpack-cli
@@ -149,6 +149,7 @@ It should look like the image below:
 
  
 Now create a webpack.config.js file, add it to your solution:
+```sh
 const path = require('path');
 module.exports = {
   mode: "development",
@@ -163,31 +164,37 @@ module.exports = {
   },
   devtool: 'source-map'
 }
-
+```
 
 When you execute npm run build, this will run WebPack applying the above config settings. Here’s what they all do:
+```sh
 const path = require('path');
+```
 Allows the use of the path library to reference our current directory
 
-
+```sh
 mode: "development",
+```
 Defaults our build to a development (non-compressed) version
 
-
+```sh
 entry: {
     "AccountForm" : path.resolve(__dirname, 'source/js/Account.Form.js')
     "AccountQuickForm" : path.resolve(__dirname, 'source/js/Account.QuickForm.js')
 },
+```
 Specifies our source files that we want to use as WebResources.
 
-
+```sh
 output: {
   library: ['D365','[name]'],
+```
     Specifies our files will be available via a call to the D365JS.[name] object. Where [Name] is replaced by the name given to each entry property
 
-
+```sh
   path: path.resolve(__dirname, 'dist'),  
-   Places our files into the dist folder from our current directory
+```
+  Places our files into the dist folder from our current directory
 
 
   filename: '[name].bundle.js'
