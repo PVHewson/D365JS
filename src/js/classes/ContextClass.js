@@ -3,13 +3,13 @@ export default class ContextClass {
   formType;
   userRoles;
 
-  static RequiredState(required)
-  {
-      return required === true || required == 'required' ? 'required' : 'none';
+  static RequiredState(required) {
+    return required === true || required == "required" ? "required" : "none";
   }
 
   constructor(formContext) {
     this.formContext = formContext;
+    this.formType = this.formContext.ui.getFormType();
   }
 
   get allAttributes() {
@@ -76,6 +76,23 @@ export default class ContextClass {
     });
   }
 
+  setSections(settings, tabName, ...sections) {
+    const tab = this.getTab(tabName)
+    if (!tab)
+    {
+      return;
+    }
+
+    sections.forEach(section => {
+      const control = tab.sections.get(section);
+      if (control) {
+        if (Object.hasOwn(settings, "visible")) {
+          control.setVisible(settings.visible);
+        }
+      }
+    });
+  }
+
   setTabs(settings, ...tabs) {
     tabs.forEach((tab) => {
       const control = typeof tab == "string" ? this.getTab(tab) : tab;
@@ -106,6 +123,10 @@ export default class ContextClass {
 
   hideControls(...controls) {
     this.setControls({ visible: false }, ...controls);
+  }
+
+  isCreateEvent() {
+    return this.formType == 1;
   }
 
   addOnChange(attribute, callback) {
