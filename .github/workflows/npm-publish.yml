@@ -16,7 +16,8 @@ jobs:
       - name: node
         uses: actions/setup-node@v3
         with:
-          node-version: '20.x'
+          node-version: "lts/*"
+          registry-url: "https://registry.npmjs.org"
       - run: npm install
       - name: Publish to GitHub Packages
         run: npm publish  --access public
