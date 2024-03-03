@@ -19,6 +19,7 @@ jobs:
           node-version: "lts/*"
           registry-url: "https://registry.npmjs.org"
       - run: npm install
+      - run: npm version patch
       - name: Publish to GitHub Packages
         run: npm publish  --access public
         env:
