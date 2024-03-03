@@ -21,6 +21,6 @@ jobs:
       - run: npm install
       #- run: npm version patch
       - name: Publish to GitHub Packages
-        run: npm publish  --access public
+        run: npm publish  --verbose --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
